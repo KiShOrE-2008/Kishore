@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quote Widget</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #1d2b64, #f8cdda);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .quote-widget {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+      text-align: center;
+      width: 90%;
+      max-width: 500px;
+      color: #fff;
+      transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    }
+    .quote-widget:hover {
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 6px 40px rgba(0, 0, 0, 0.2);
+      transform: scale(1.05);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .quote {
+      font-size: 1.5rem;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    .author {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #ddd;
+    }
+
+    @keyframes fadeInOut {
+      0%, 100% { opacity: 0; }
+      10%, 90% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="quote-widget">
+    <div class="quote">"Success is not final, failure is not fatal: It is the courage to continue that counts."</div>
+    <div class="author">- Winston Churchill</div>
+  </div>
+</body>
+</html>

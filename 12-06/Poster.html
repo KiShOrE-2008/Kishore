@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Music Festival Poster</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Montserrat:wght@400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background: radial-gradient(circle at center, #0a0a23, #000000 80%);
+      font-family: 'Montserrat', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      color: white;
+    }
+
+    .poster {
+      position: relative;
+      width: 90%;
+      max-width: 700px;
+      padding: 3rem 2rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid rgba(0, 255, 255, 0.2);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.15);
+      text-align: center;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+.title {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #5465ff; /* Starting color */
+  animation: colorShift 4s ease-in-out infinite;
+}
+
+
+
+    .subtitle {
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+      color: #ccc;
+      margin-bottom: 2rem;
+    }
+
+    .details p {
+      margin: 0.5rem 0;
+      font-size: 1.05rem;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #00ffff;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.8rem 1.8rem;
+      background: linear-gradient(90deg, #00ffff, #ff00cc);
+      color: #000;
+      font-weight: bold;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      filter: brightness(1.1);
+      box-shadow: 0 0 15px #00ffffaa;
+    }
+
+    .glow-lines {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      pointer-events: none;
+    }
+
+
+
+  </style>
+</head>
+<body>
+  <div class="poster">
+    <div class="title">Neon Soundwave</div>
+    <div class="subtitle">Music Festival 2025</div>
+
+    <div class="details">
+      <p><span class="highlight">Date:</span> August 10, 2025</p>
+      <p><span class="highlight">Location:</span> Neon Valley Arena, Goa</p>
+      <p><span class="highlight">Lineup:</span> DJ Nova • EchoDrive • SynthLab • VortexX</p>
+    </div>
+
+    <button class="button">Book Tickets</button>
+  </div>
+</body>
+</html>

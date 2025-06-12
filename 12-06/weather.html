@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modern Weather Card</title>
+  <style>
+    /* RESET & BASE */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* CARD CONTAINER */
+    .weather-card {
+      width: 320px;
+      padding: 2rem;
+      border-radius: 25px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      color: #fff;
+      text-align: center;
+      transition: 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .weather-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.1), transparent 70%);
+      animation: rotate 10s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .weather-card * {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ICON */
+    .weather-icon {
+      font-size: 64px;
+      margin-bottom: 10px;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+    }
+
+    /* TEMPERATURE */
+    .temp {
+      font-size: 54px;
+      font-weight: 700;
+      background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 10px;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .condition {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #e0e0e0;
+    }
+
+    /* DETAILS SECTION */
+    .details {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      margin-top: 15px;
+      color: #ccc;
+    }
+
+    .detail-item {
+      flex: 1;
+      padding: 0 10px;
+    }
+
+    .detail-item strong {
+      display: block;
+      font-size: 16px;
+      color: #fff;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="weather-card">
+    <div class="weather-icon">🌤️</div>
+    <div class="temp">28°C</div>
+    <div class="condition">Partly Cloudy</div>
+    <div class="details">
+      <div class="detail-item">
+        Humidity
+        <strong>58%</strong>
+      </div>
+      <div class="detail-item">
+        Wind
+        <strong>12 km/h</strong>
+      </div>
+      <div class="detail-item">
+        Feels Like
+        <strong>30°C</strong>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
