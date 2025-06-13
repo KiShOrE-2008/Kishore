@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marvel Movies Gallery</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1c1c1c;
+      color: #fff;
+    }
+
+    /* Fixed Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #202020;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    /* Layout wrapper */
+    .layout {
+      display: flex;
+      margin-top: 80px; /* offset for fixed header */
+    }
+
+    /* Sticky Sidebar */
+    aside {
+      position: sticky;
+      top: 80px;
+      width: 200px;
+      background-color: #2c2c2c;
+      height: 100vh;
+      padding: 20px;
+    }
+
+    aside h2 {
+      margin-bottom: 10px;
+      color: #e62429;
+    }
+
+    aside ul {
+      list-style: none;
+    }
+
+    aside ul li {
+      margin: 10px 0;
+    }
+
+    /* Main Content */
+    main {
+      position: relative;
+      flex: 1;
+      padding: 20px;
+      background-color: #121212;
+    }
+
+    main h2 {
+      margin-bottom: 20px;
+      color: #e62429;
+    }
+
+    .movie-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .movie {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .movie img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .movie:hover img {
+      transform: scale(1.1);
+      filter: brightness(0.7);
+    }
+
+    .movie-title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .movie:hover .movie-title {
+      opacity: 1;
+    }
+
+    /* Footer */
+    footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: #202020;
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Marvel Cinematic Universe Gallery</h1>
+  </header>
+
+  <div class="layout">
+    <aside>
+      <h2>Phases</h2>
+      <ul>
+        <li>Phase 1</li>
+        <li>Phase 2</li>
+        <li>Phase 3</li>
+        <li>Phase 4</li>
+        <li>Phase 5</li>
+      </ul>
+    </aside>
+
+    <main>
+      <h2>Popular Marvel Movies</h2>
+      <div class="movie-grid">
+        <!-- Each movie -->
+        <div class="movie">
+          <img src="https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_FMjpg_UX1000_.jpg" alt="Iron Man">
+          <a href="https://en.wikipedia.org/wiki/Iron_Man_(2008_film)" target="_blank" style="text-decoration:none; color:inherit;">
+          <div class="movie-title">Iron Man (2008)</div>
+          </a>
+        </div>
+        <div class="movie">
+          <img src="https://upload.wikimedia.org/wikipedia/en/8/8a/The_Avengers_%282012_film%29_poster.jpg" alt="Avengers">
+          <a href="https://en.wikipedia.org/wiki/The_Avengers_(2012_film)" target="_blank" style="text-decoration:none; color:inherit;">
+            <div class="movie-title">The Avengers (2012)</div>
+          </a>
+        </div>
+        <div class="movie">
+          <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT4deWCcW67wZf2oL9_myl-cFgUBzVTcAYfDFONt635m_SHofnGV8veGVQ6U1-Izuf_h4PB_w" alt="Civil War">
+            <a href="https://en.wikipedia.org/wiki/Captain_America:_Civil_War" target="_blank" style="text-decoration:none; color:inherit;">
+            <div class="movie-title">Civil War (2016)</div>
+            </a>
+        </div>
+        <div class="movie">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1MSjVz4AlBMvl3RD0eXqenCdZbowXC-2uGUcgYGSrtuOdsVAGWVYmJ24_wB54zLkMxaVU" alt="Black Panther">
+          <a href="https://en.wikipedia.org/wiki/Black_Panther_(film)" target="_blank" style="text-decoration:none; color:inherit;">
+            <div class="movie-title">Black Panther (2018)</div>
+          </a>
+        </div>
+        <div class="movie">
+          <img src="https://upload.wikimedia.org/wikipedia/en/4/4d/Avengers_Infinity_War_poster.jpg" alt="Infinity War">
+          <a href="https://en.wikipedia.org/wiki/Avengers:_Infinity_War" target="_blank" style="text-decoration:none; color:inherit;">
+            <div class="movie-title">Infinity War (2018)</div>
+          </a>
+        </div>
+        <div class="movie">
+          <img src="https://m.media-amazon.com/images/I/81ai6zx6eXL._AC_UF894,1000_QL80_.jpg" alt="Endgame">
+          <a href="https://en.wikipedia.org/wiki/Avengers:_Endgame" target="_blank" style="text-decoration:none; color:inherit;">
+            <div class="movie-title">Endgame (2019)</div>
+          </a>
+        </div>
+        <div class="movie">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJXG-39ax_uSWVuU05XI2eynuf0D9rcrNmFBJfCDIm_K9A2SUdFTMRREZ7JVqliTX3NodG9A" alt="No Way Home">
+          <a href="https://en.wikipedia.org/wiki/Spider-Man:_No_Way_Home" target="_blank" style="text-decoration:none; color:inherit;">
+            <div class="movie-title">No Way Home (2021)</div>
+          </a>
+        </div>
+        <div class="movie">
+          <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS053MeD3mc76VbzZSRAh7wpZUyWSDPP1aD2665pn5AF_83FDC2h1x5g4UNrogaxXqXHXVvJw" alt="Multiverse of Madness">
+          <a href="https://en.wikipedia.org/wiki/Doctor_Strange_in_the_Multiverse_of_Madness" target="_blank" style="text-decoration:none; color:inherit;">
+            <div class="movie-title">Multiverse of Madness (2022)</div>
+          </a>
+        </div>
+        <div class="movie">
+          <img src="https://m.media-amazon.com/images/M/MV5BNDAzNmYwZjgtNDc3YS00ZDMyLTk0MjktMTg4MGNmNGU3MjlhXkEyXkFqcGc@._V1_.jpg" alt="Moon Knight">
+          <a href="https://en.wikipedia.org/wiki/Moon_Knight_(TV_series)" target="_blank" style="text-decoration:none; color:inherit;">
+            <div class="movie-title">Moon Knight</div>
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+
+
+</body>
+</html>
