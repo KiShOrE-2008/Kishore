@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jewellery Shop - Page 2</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #000;
+      color: #fff;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: gold;
+      margin-bottom: 40px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .product-card {
+      background: #111;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .product-card img {
+      max-width: 100%;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    .product-card h3 {
+      color: gold;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .product-card p {
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .pagination a {
+      display: inline-block;
+      padding: 10px 16px;
+      background-color: #111;
+      color: gold;
+      border: 1px solid gold;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .pagination a:hover {
+      background-color: gold;
+      color: black;
+    }
+
+    .pagination a.active {
+      background-color: gold;
+      color: black;
+      pointer-events: none;
+    }
+
+    @media (max-width: 600px) {
+      .product-card {
+        padding: 15px;
+      }
+
+      .pagination a {
+        padding: 8px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Our Premium Jewellery</h1>
+
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="https://img.pikbest.com/ai/illus_our/20230428/ab59ca5b2e8c68023d881febe8024bb0.jpg!w700wp" alt="Gold Ring" />
+      <h3>Gold Engagement Ring</h3>
+      <p>Stylish, elegant 22K gold ring.</p>
+    </div>
+    <div class="product-card">
+      <img src="https://www.shutterstock.com/image-photo/diamonds-necklace-shot-against-black-600nw-184410428.jpg" alt="Diamond Necklace" />
+      <h3>Crystal Diamond Necklace</h3>
+      <p>Studded with pure diamonds & gold links.</p>
+    </div>
+    <div class="product-card">
+      <img src="https://media.istockphoto.com/id/1190768808/photo/close-up-gold-diamond-bracelet-isolated-on-black-background.jpg?s=612x612&w=0&k=20&c=wUM8ZuQIan3GCyD0YYZ-OOMGiwqX2ZvOwjIUa2AlfRA=" alt="Bracelet" />
+      <h3>Luxury Bracelet</h3>
+      <p>Fine artisan crafted for occasions.</p>
+    </div>
+    <div class="product-card">
+      <img src="https://media.istockphoto.com/id/982513800/photo/heavy-golden-pendant-with-beads-and-pearl-set-closeup-image-on-black-background.jpg?s=612x612&w=0&k=20&c=kf5iBbsa7Mgr236TFQ4eVnF2K2danf3h8li5RUYRx5k=" alt="Pearl Set" />
+      <h3>Gold Pearl Set</h3>
+      <p>Classic pearls fused with gold patterns.</p>
+    </div>
+    </div>
+
+  <div class="pagination">
+    <a href="page1.html" class="active">1</a>
+    <a href="page2.html">2</a>
+    <a href="page3.html">3</a>
+    <a href="page4.html">4</a>
+    <a href="page5.html">5</a>
+  </div>
+
+</body>
+</html>
