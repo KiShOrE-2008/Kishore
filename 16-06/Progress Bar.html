@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Progress Bar Animation</title>
+  <style>
+    body {
+      background-color: #1e1e1e;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .progress-container {
+      width: 80%;
+      background-color: #444;
+      border-radius: 25px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+
+    .progress-bar {
+      height: 30px;
+      width: 0;
+      background: linear-gradient(90deg, #00ff87, #60efff);
+      animation: loadProgress 10s forwards;
+      border-radius: 25px;
+    }
+
+    @keyframes loadProgress {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    .label {
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="progress-container">
+    <div class="progress-bar"></div>
+  </div>
+  <div class="label">Loading... Please wait</div>
+
+</body>
+</html>
