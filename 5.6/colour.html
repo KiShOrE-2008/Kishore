@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Color Palette Display</title>
+  <style>
+    body {font-family: Arial, sans-serif; margin: 0; padding: 40px; background: #f9f9f9; }
+    h1 {text-align: center; margin-bottom: 40px;}
+    .palette { display: grid; gap: 20px;display: flex; justify-content: center; align-items: center;}
+    .color-box {border-radius: 10px; padding: 10px; color: #000000;}
+    .label {font-weight: bold; margin-bottom: 10px;}
+    .code { font-family: monospace;}
+  </style>
+</head>
+<body>
+
+  <h1>🎨 Color Palette Display - RGB, RGBA, HSL, HSLA</h1>
+<section>
+  <div class="palette">
+    <!-- RGB -->
+    <div class="color-box" style="background-color: rgb(255, 99, 71);">
+      <div class="label">RGB</div>
+      <div class="code">rgb(255, 99, 71)</div>
+    </div>
+
+    <!-- RGBA -->
+    <div class="color-box" style="background-color: rgba(30, 144, 255, 0.6); color: #000;">
+      <div class="label">RGBA</div>
+      <div class="code">rgba(30, 144, 255, 0.6)</div>
+    </div>
+
+    <!-- HSL -->
+    <div class="color-box" style="background-color: hsl(120, 60%, 50%);">
+      <div class="label">HSL</div>
+      <div class="code">hsl(120, 60%, 50%)</div>
+    </div>
+
+    <!-- HSLA -->
+    <div class="color-box" style="background-color: hsla(300, 70%, 50%, 0.7);">
+      <div class="label">HSLA</div>
+      <div class="code">hsla(300, 70%, 50%, 0.7)</div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
